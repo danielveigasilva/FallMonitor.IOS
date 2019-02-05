@@ -12,7 +12,7 @@
 //caso encontre algum erro de portugues me desculpe, e por favor conserte :P, modifique o
 //codigo o quanto quiser e lembre-se: COMENTE TUDO!
 //
-//Boa sorte e que a forca esteja com voce!!!aaaa
+//Boa sorte e que a forca esteja com voce!
 //
 //     - Daniel Veiga (daveigantu@gmail.com)
 //
