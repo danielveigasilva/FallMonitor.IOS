@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C836ED8221F38FE7009AF2A6 /* Meu_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meu_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C836ED8221F38FE7009AF2A6 /* FallMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C836ED8521F38FE7009AF2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C836ED8721F38FE7009AF2A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C836ED8A21F38FE7009AF2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		C836ED7921F38FE6009AF2A6 = {
 			isa = PBXGroup;
 			children = (
-				C836ED8421F38FE7009AF2A6 /* Meu_App */,
+				C836ED8421F38FE7009AF2A6 /* FallMonitor */,
 				C836ED8321F38FE7009AF2A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		C836ED8321F38FE7009AF2A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C836ED8221F38FE7009AF2A6 /* Meu_App.app */,
+				C836ED8221F38FE7009AF2A6 /* FallMonitor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C836ED8421F38FE7009AF2A6 /* Meu_App */ = {
+		C836ED8421F38FE7009AF2A6 /* FallMonitor */ = {
 			isa = PBXGroup;
 			children = (
 				C836ED8521F38FE7009AF2A6 /* AppDelegate.swift */,
@@ -61,15 +61,15 @@
 				C836ED8E21F38FE7009AF2A6 /* LaunchScreen.storyboard */,
 				C836ED9121F38FE7009AF2A6 /* Info.plist */,
 			);
-			path = Meu_App;
+			path = FallMonitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C836ED8121F38FE7009AF2A6 /* Meu_App */ = {
+		C836ED8121F38FE7009AF2A6 /* FallMonitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C836ED9421F38FE7009AF2A6 /* Build configuration list for PBXNativeTarget "Meu_App" */;
+			buildConfigurationList = C836ED9421F38FE7009AF2A6 /* Build configuration list for PBXNativeTarget "FallMonitor" */;
 			buildPhases = (
 				C836ED7E21F38FE7009AF2A6 /* Sources */,
 				C836ED7F21F38FE7009AF2A6 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = Meu_App;
+			name = FallMonitor;
 			productName = Meu_App;
-			productReference = C836ED8221F38FE7009AF2A6 /* Meu_App.app */;
+			productReference = C836ED8221F38FE7009AF2A6 /* FallMonitor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C836ED7D21F38FE6009AF2A6 /* Build configuration list for PBXProject "Meu_App" */;
+			buildConfigurationList = C836ED7D21F38FE6009AF2A6 /* Build configuration list for PBXProject "FallMonitor" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C836ED8121F38FE7009AF2A6 /* Meu_App */,
+				C836ED8121F38FE7009AF2A6 /* FallMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -275,9 +275,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Meu_App/Info.plist;
+				DEVELOPMENT_TEAM = QG3UCHT929;
+				INFOPLIST_FILE = FallMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "VeigaGames.Meu-App";
+				PRODUCT_BUNDLE_IDENTIFIER = VeigaGames.FallMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,9 +290,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Meu_App/Info.plist;
+				DEVELOPMENT_TEAM = QG3UCHT929;
+				INFOPLIST_FILE = FallMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "VeigaGames.Meu-App";
+				PRODUCT_BUNDLE_IDENTIFIER = VeigaGames.FallMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C836ED7D21F38FE6009AF2A6 /* Build configuration list for PBXProject "Meu_App" */ = {
+		C836ED7D21F38FE6009AF2A6 /* Build configuration list for PBXProject "FallMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C836ED9221F38FE7009AF2A6 /* Debug */,
@@ -310,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C836ED9421F38FE7009AF2A6 /* Build configuration list for PBXNativeTarget "Meu_App" */ = {
+		C836ED9421F38FE7009AF2A6 /* Build configuration list for PBXNativeTarget "FallMonitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C836ED9521F38FE7009AF2A6 /* Debug */,
