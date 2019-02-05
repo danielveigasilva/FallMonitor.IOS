@@ -6,8 +6,21 @@
 //  Copyright © 2019 Daniel Veiga. All rights reserved.
 //
 
+//**************************************SAUDACOES******************************************
+//
+//      Seja bem vindo! Sinta-se em casa, todo o codigo encontra-se comentado e explicado,
+//caso encontre algum erro de portugues me desculpe, e por favor conserte :P, modifique o
+//codigo o quanto quiser e lembre-se: COMENTE TUDO!
+//
+//Boa sorte e que a forca esteja com voce!
+//
+//     - Daniel Veiga (daveigantu@gmail.com)
+//
+//*****************************************************************************************
+
 import UIKit
 import CoreMotion
+import AudioToolbox
 
 class ViewController: UIViewController {
 
@@ -22,11 +35,15 @@ class ViewController: UIViewController {
     var fallflag = false
     var time1 = Timer()
     var time5 = Timer()
-    var segundo1 = 2
+    var segundo1 = 30
     var segundo5 = 5
     
     let max = 28.0
     let min = 4.85
+    
+    let alerta = UIAlertController (title: "Alerta de Queda!", message: "Uma queda foi detectada, deseja interromper a notificacao? Segundos restantes: 30", preferredStyle: UIAlertControllerStyle.alert)
+    
+    
     
     override func viewDidLoad()
     {
@@ -34,6 +51,13 @@ class ViewController: UIViewController {
         self.stAcionar.isOn = false
         self.lblStatus.text = "Status OFF"
         self.lblStatus.textColor = UIColor.red
+        
+        alerta.addAction(UIAlertAction(title: "Sim", style: UIAlertActionStyle.default, handler:
+            {
+                (action) in
+                    self.reset()
+                    self.alerta.dismiss(animated: true, completion: nil)
+            }))
     }
     
     @IBAction func Acionado(_ sender: UISwitch) //Evento do Switch stAcionar
@@ -105,51 +129,49 @@ class ViewController: UIViewController {
                 {
                     if ar < self.min
                     {
-                        self.lblStatus.text = "queda livre"
                         self.fallflag = true
                     }
-                    
-                    //self.falldetection(valor: ar)
                     
                 }
             }
             
         }
     }
+    
     func reset()
     {
-        segundo1 = 2
+        segundo1 = 30
         fallflag = false
         time1.invalidate()
-    }
-    
-    func falldetection(valor aceleracao:Double)
-    {
-        
-        if aceleracao < min
-        {
-            self.lblStatus.text = "Queda Livre"
-            self.fallflag = true
-            self.time1 = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.AtualizaTempo)), userInfo: nil, repeats: true)
-            self.time1.fire()
-        }
+        alerta.dismiss(animated: true, completion: nil)
+        alerta.message = "Uma queda foi detectada, deseja interromper a notificacao? Segundos restantes: 30"
         
     }
     
     @objc func AtualizaTempo()
     {
         segundo1 = segundo1 - 1
+        
+        alerta.message = "Uma queda foi detectada, deseja interromper a notificacao? Segundos restantes: \(segundo1)"
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
         if (segundo1 == 0)
         {
+            alerta.dismiss(animated: true, completion: nil)
             self.reset()
         }
     }
+    
     func verifica(valor aceleracao:Double)
     {
         if aceleracao >= max
         {
-            self.lblStatus.text = "queda Detectada"
-            self.reset()
+            self.fallflag = false
+            self.present(alerta, animated: true, completion: nil)
+            
+            self.time1 = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.AtualizaTempo)), userInfo: nil, repeats: true)
+            self.time1.fire()
+
         }
     }
 
