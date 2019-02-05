@@ -11,6 +11,7 @@ import CoreMotion
 
 class ViewController: UIViewController {
     //Teste de Commit GitHub
+    //Super teste de Commit pra fechar......ou nao
     @IBOutlet weak var EixoX: UILabel!
     @IBOutlet weak var EixoY: UILabel!
     @IBOutlet weak var EixoZ: UILabel!
