@@ -10,7 +10,7 @@ import UIKit
 import CoreMotion
 
 class ViewController: UIViewController {
-
+    //Teste de Commit GitHub
     @IBOutlet weak var EixoX: UILabel!
     @IBOutlet weak var EixoY: UILabel!
     @IBOutlet weak var EixoZ: UILabel!
